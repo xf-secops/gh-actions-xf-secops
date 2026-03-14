@@ -19,14 +19,14 @@ jobs:
     permissions:
       contents: read
     uses: >-
-      shared-common/gh-actions-shared/.github/workflows/summary-core.yml@v0.0.25
+      shared-common/gh-actions-shared/.github/workflows/summary-core.yml@v0.0.26
     with:
       target-org: ${{ github.repository_owner }}
       event-context: ${{ toJson(github.event) }}
       event-name: ${{ github.event_name }}
       expected-event-action: ${{ inputs.dispatch_action }}
       shared-repo: shared-common/gh-actions-shared
-      shared-ref: v0.0.25
+      shared-ref: v0.0.26
       bws-version: ${{ vars.BWS_VERSION }}
       bws-sha256: ${{ vars.BWS_SHA256 }}
     secrets:
