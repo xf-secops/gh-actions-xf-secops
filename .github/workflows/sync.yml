@@ -53,6 +53,7 @@ jobs:
     with:
       validated-payload: ${{ needs.prepare_sync.outputs.validated-payload }}
       target-org: ${{ github.repository_owner }}
+      target-profile: xf-secops
       shared-repo: shared-common/gh-actions-shared
       shared-ref: v0.0.26
       bws-version: ${{ vars.BWS_VERSION }}
