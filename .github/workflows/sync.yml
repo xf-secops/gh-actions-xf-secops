@@ -13,12 +13,12 @@ jobs:
     permissions:
       contents: read
     uses: >-
-      shared-common/gh-actions-shared/.github/workflows/gitlab-sync-core.yml@v0.0.36
+      shared-common/gh-actions-shared/.github/workflows/gitlab-sync-core.yml@v0.0.37
     with:
       target-org: ${{ github.repository_owner }}
       target-profile: xf-secops
       shared-repo: shared-common/gh-actions-shared
-      shared-ref: v0.0.36
+      shared-ref: v0.0.37
       bws-version: ${{ vars.BWS_VERSION }}
       bws-sha256: ${{ vars.BWS_SHA256 }}
     secrets:
