@@ -8,7 +8,7 @@ Org-specific wrapper workflows for the `xf-secops` GitHub org. These workflows a
 Fork drift polling and tracked-branch sync dispatches are triggered by the Worker (no polling repos).
 
 ## Requirements
-- `BWS_ACCESS_TOKEN` and `BWS_PROJECT_ID` repo secrets
+- `BWS_PROJECT_ID` and `BWS_ACCESS_TOKEN` repo secrets
 - `BWS_VERSION` and `BWS_SHA256` repo variables
 
 All workflow logic resides in the shared repo.
