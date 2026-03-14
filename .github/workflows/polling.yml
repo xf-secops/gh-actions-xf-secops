@@ -11,9 +11,16 @@ name: polling
       app_id:
         required: true
         type: string
+      repo_full_name:
+        required: true
+        type: string
       event_payload:
         required: true
         type: string
+
+concurrency:
+  group: repo-sync-${{ github.repository }}-${{ github.event.inputs.repo_full_name }}
+  cancel-in-progress: false
 
 permissions: {}
 
