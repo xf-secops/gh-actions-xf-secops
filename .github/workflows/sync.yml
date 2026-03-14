@@ -29,7 +29,7 @@ jobs:
     permissions:
       contents: read
     uses: >-
-      shared-common/gh-actions-shared/.github/workflows/prepare-sync-core.yml@v0.0.21
+      shared-common/gh-actions-shared/.github/workflows/prepare-sync-core.yml@v0.0.22
     with:
       event-payload: ${{ inputs.event_payload }}
       event-context: ${{ toJson(github.event) }}
@@ -37,7 +37,7 @@ jobs:
       expected-event-action: ${{ inputs.dispatch_action }}
       target-org: ${{ github.repository_owner }}
       shared-repo: shared-common/gh-actions-shared
-      shared-ref: v0.0.21
+      shared-ref: v0.0.22
       bws-version: ${{ vars.BWS_VERSION }}
       bws-sha256: ${{ vars.BWS_SHA256 }}
     secrets:
@@ -49,12 +49,12 @@ jobs:
     permissions:
       contents: read
     uses: >-
-      shared-common/gh-actions-shared/.github/workflows/gitlab-sync-core.yml@v0.0.21
+      shared-common/gh-actions-shared/.github/workflows/gitlab-sync-core.yml@v0.0.22
     with:
       validated-payload: ${{ needs.prepare_sync.outputs.validated-payload }}
       target-org: ${{ github.repository_owner }}
       shared-repo: shared-common/gh-actions-shared
-      shared-ref: v0.0.21
+      shared-ref: v0.0.22
       bws-version: ${{ vars.BWS_VERSION }}
       bws-sha256: ${{ vars.BWS_SHA256 }}
     secrets:
