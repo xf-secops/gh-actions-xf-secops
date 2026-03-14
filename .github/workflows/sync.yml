@@ -18,10 +18,6 @@ name: sync
         required: true
         type: string
 
-concurrency:
-  group: repo-sync-${{ github.repository }}-${{ github.event.inputs.repo_full_name }}
-  cancel-in-progress: false
-
 permissions: {}
 
 jobs:
